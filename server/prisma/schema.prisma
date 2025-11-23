@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id                  String   @id @default(uuid())
+  title               String
+  architectName       String
+  areaSqFt            Float
+  location            String
+  description         String
+  thumbnailBlob       Bytes    // Stored directly in DB
+  mainImageUrl        String?  // Legacy/Primary image
+  images              String[] // New: Array of image URLs (5-15)
+  modelUrl            String?
+  youtubeUrl          String?  // New: YouTube video link
+  simulationVideoUrl  String?  // Legacy: kept for backward compatibility if needed
+  createdAt           DateTime @default(now())
+}

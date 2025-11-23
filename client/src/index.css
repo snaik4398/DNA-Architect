@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Theme Definitions */
+.theme-light {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --text-primary: #1e293b;
+    /* Slate 800 */
+    --text-secondary: #475569;
+    --accent: #0f172a;
+    --border: #e2e8f0;
+}
+
+.theme-dark {
+    --bg-primary: #1a1a1a;
+    /* Deep Charcoal */
+    --bg-secondary: #262626;
+    --text-primary: #f5f5f5;
+    /* Off-white */
+    --text-secondary: #a3a3a3;
+    --accent: #ffffff;
+    --border: #404040;
+}
+
+.theme-blueprint {
+    --bg-primary: #002b59;
+    /* Architectural Blue */
+    --bg-secondary: #003d80;
+    --text-primary: #ffffff;
+    --text-secondary: #bfdbfe;
+    --accent: #60a5fa;
+    --border: #1e40af;
+}
+
+.theme-sandstone {
+    --bg-primary: #e6e0d4;
+    /* Warm Beige */
+    --bg-secondary: #d6d0c4;
+    --text-primary: #4a4036;
+    /* Dark Brown */
+    --text-secondary: #786c61;
+    --accent: #8c7b6c;
+    --border: #bcaaa4;
+}
